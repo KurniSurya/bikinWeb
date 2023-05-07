@@ -56,7 +56,7 @@ body {
 }
 
 .navbar .navbar-nav a::after {
-  content: 0;
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
@@ -68,12 +68,12 @@ body {
   transition: 0.2s linear;
 }
 
-.navbar.navbar-extra .a{
+.navbar .navbar-extra a {
   color: #fff;
   margin: 0.5rem;
 }
 
-.navbar.navbar-extra .a:hover {
+.navbar .navbar-extra a:hover {
   color: var(--primary);
 }
 

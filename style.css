@@ -1,6 +1,16 @@
 :root {
   --primary: #b6895b;
   --bg: #010101;
+  --Turquoise: #4cbfa6; 
+  --Soft-Lilac: #f6ebf4;
+  --Purple: #482673;
+  --Orchid: #ed0b70;
+  --Digi-Denim: #301008;
+  --white: #ffffff;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 * {
@@ -14,47 +24,48 @@
 
 body {
   font-family: "poppins", sans-serif;
-  background-color: var(--bg);
-  color: #fff;
-  min-height: 5000px;
+  background-color: var(--Soft-Lilac);
+  color: var(--Purple);
 }
 
 /* navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #61472d;
+  background-color: rgba(245, 224, 243, 0.9);
+  border-bottom: 1px solid none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+  
 }
 
 .navbar .navbar-logo {
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--bg);
   font-style: italic;
 }
 
 .navbar .navbar-logo span {
-  color: var(--primary);
+  color: var(--Purple);
   font-size: 2rem;
 }
 
 .navbar .navbar-nav a {
-  color: #fff;
+  color: var(--Purple);
   display: inline-block;
   font-size: 1.3rem;
-  margin: 0 1rem;
+  margin: 0 2rem;
+  flex-direction: row;
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--Orchid);
 }
 
 .navbar .navbar-nav a::after {
@@ -71,17 +82,19 @@ body {
 }
 
 .navbar .navbar-extra a {
-  color: #fff;
+  color: var(--Purple);
   margin: 0.5rem;
 }
 
 .navbar .navbar-extra a:hover {
-  color: var(--primary);
+  color: var(--o);
 }
 
 #hamburger-menu {
   display: none;
 }
+
+/* hero section */
 
 .hero {
   min-height: 100vh;
@@ -92,7 +105,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  mix-blend-mode: difference;
 }
 
 .hero::after {
@@ -112,24 +124,26 @@ body {
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 58rem;
+  mix-blend-mode: difference;
 }
 
 .hero .content h1 {
   font-size: 3em;
-  color: #fff;
+  color: var(--white);
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
 
 .hero .content span {
-  color: var(--primary);
+  color: var(--Turquoise);
 }
 
 .hero .content p {
   font-size: 1.4rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   line-height: 1.4;
   font-weight: 100;
+  color: var(--white);
 }
 
 .hero .content .cta {
@@ -138,7 +152,7 @@ body {
   padding: 1rem 3rem;
   font-size: 1.4rem;
   color: #fff;
-  background-color: var(--primary);
+  background-color: var(--Turquoise);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -168,7 +182,7 @@ body {
 }
 
 .about .row .about-img img {
-  width: 85%;
+  width: 100%;
 }
 
 .about .row .content {
@@ -178,13 +192,13 @@ body {
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 .about .row .content p {
   margin-bottom: 1.4rem;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.4rem;
   line-height: 1.6;
 }
@@ -203,14 +217,14 @@ body {
   margin: auto;
   font-size: 1.4rem;
   line-height: 1.6;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 /* contact section */
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  background-color: #222;
+  background-color: rgba(72, 38, 115, 0.6);
 }
 
 .contact .row .map {
@@ -229,8 +243,8 @@ body {
   display: flex;
   align-items: center;
   margin: 2rem;
-  background-color: var(--bg);
-  border: 1px solid #eee;
+  background-color: var(--Soft-Lilac);
+  border: 1px solid var(--Purple);
   padding-left: 2rem;
 }
 
@@ -239,7 +253,7 @@ body {
   padding: 2rem;
   font-size: 1.7rem;
   background: none;
-  color: #fff;
+  color: var(--bg);
 }
 
 .contact .row form button {
@@ -247,9 +261,36 @@ body {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: #fff;
-  background-color: var(--primary);
+  color: var(--white);
+  background-color: var(--Turquoise);
   cursor: pointer;
+  border-radius: 4px;
+}
+
+/* footer section */
+.footer{
+  background-color: var(--Purple);
+  text-align: center  ;
+  padding: 1rem 3rem;
+  margin-top: 3rem ;
+}
+
+.footer .socials{
+  padding: 1rem 0;
+}
+
+.footer .socials a{
+  color: var(--white);
+  margin: 1rem;
+}
+
+.footer .links a{
+  color: var(--white);
+  margin: 0.5rem;
+}
+
+.footer .credit{
+  font-size: 0.8rem;
 }
 
 /* media queries */
@@ -318,6 +359,10 @@ body {
 
   .about .row .content p {
     font-size: 1.5rem;
+  }
+
+  .contact .row{
+    flex-wrap: wrap;
   }
 }
 
